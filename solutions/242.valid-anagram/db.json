@@ -1,0 +1,1 @@
+{"javascript":"/**\r\n * @param {string} s\r\n * @param {string} t\r\n * @return {boolean}\r\n */\r\nvar isAnagram = function(s, t) {\r\n    if (s.length !== t.length) return false;\r\n\tif (s === '' && t === '') return true;\r\n\t\r\n\treturn s.split('').sort().toString() === t.split('').sort().toString();\r\n};"}

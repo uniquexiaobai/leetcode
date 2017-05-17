@@ -1,0 +1,1 @@
+{"javascript":"/**\r\n * @param {number} num\r\n * @return {number}\r\n */\r\nvar findComplement = function(num) {\r\n    var s = num.toString(2).split('').map(function (v) {\r\n        return v == 1 ? 0 : 1;\r\n    }).join('');\r\n    \r\n    return parseInt(s, 2); \r\n};"}

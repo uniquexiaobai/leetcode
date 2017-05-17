@@ -1,0 +1,1 @@
+{"javascript":"/**\r\n * @param {number} n\r\n * @return {number}\r\n */\r\nvar climbStairs = function(n) {\r\n    var result = [1, 1];\r\n\r\n\tfor (var i = 2; i <= n; i ++) {\r\n\t\tresult[i] = result[i - 1] + result[i - 2];\r\n\t}\r\n\treturn result[n];\r\n};"}

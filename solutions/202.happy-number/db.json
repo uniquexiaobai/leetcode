@@ -1,0 +1,1 @@
+{"javascript":"/**\r\n * @param {number} n\r\n * @return {boolean}\r\n */\r\nvar isHappy = function(n) {\r\n\tvar set = new Set();\r\n\r\n\twhile (!set.has(n)) {\r\n\t\tif (n === 1) return true;\r\n\t\tset.add(n);\r\n\t\tn = (n + '').split('').reduce(function (prev, cur) {\r\n\t\t\treturn prev + cur * cur; \r\n\t\t}, 0);\r\n\t}\r\n\treturn false;\r\n};"}
