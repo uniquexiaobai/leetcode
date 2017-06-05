@@ -5,10 +5,12 @@
   "author": "liucan@ebupt.com",
   "private": false,
   "scripts": {
+    "spider": "cd solutions && lc-spider && cd ../",
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
     "lint": "eslint --ext .js,.vue src",
-    "generate": "node lib/generate.js"
+    "generate": "node lib/generate.js",
+    "update": "npm run spider && npm run generate"
   },
   "dependencies": {
     "chalk": "^1.1.3",
