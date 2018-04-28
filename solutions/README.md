@@ -3,9 +3,9 @@ This is my leetcode solution folder.
 
 Language: javascript
 
-Last updated: 2017-07-16
+Last updated: 2018-04-29
 
-I've solved 56/569 problems (105 problems for a fee).
+I've solved 57/738 problems (133 problems for a fee).
 
 The source code was fetched using the tool [leetcode-spider](https://github.com/Ma63d/leetcode-spider).
 
@@ -13,6 +13,7 @@ The source code was fetched using the tool [leetcode-spider](https://github.com/
 |:--:|:-----:|:---------:|:----:|
 |001|[two-sum](https://leetcode.com/problems/two-sum/)| [javascript](./001.two-sum/two-sum.js)| Easy|
 |002|[add-two-numbers](https://leetcode.com/problems/add-two-numbers/)| [javascript](./002.add-two-numbers/add-two-numbers.js)| Medium|
+|007|[reverse-integer](https://leetcode.com/problems/reverse-integer/)| [javascript](./007.reverse-integer/reverse-integer.js)| Easy|
 |015|[3sum](https://leetcode.com/problems/3sum/)| [javascript](./015.3sum/3sum.js)| Medium|
 |020|[valid-parentheses](https://leetcode.com/problems/valid-parentheses/)| [javascript](./020.valid-parentheses/valid-parentheses.js)| Easy|
 |021|[merge-two-sorted-lists](https://leetcode.com/problems/merge-two-sorted-lists/)| [javascript](./021.merge-two-sorted-lists/merge-two-sorted-lists.js)| Easy|
@@ -41,7 +42,7 @@ The source code was fetched using the tool [leetcode-spider](https://github.com/
 |120|[triangle](https://leetcode.com/problems/triangle/)| [javascript](./120.triangle/triangle.js)| Medium|
 |125|[valid-palindrome](https://leetcode.com/problems/valid-palindrome/)| [javascript](./125.valid-palindrome/valid-palindrome.js)| Easy|
 |144|[binary-tree-preorder-traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/)| [javascript](./144.binary-tree-preorder-traversal/binary-tree-preorder-traversal.js)| Medium|
-|145|[binary-tree-postorder-traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/)| [javascript](./145.binary-tree-postorder-traversal/binary-tree-postorder-traversal.js)| hard|
+|145|[binary-tree-postorder-traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/)| [javascript](./145.binary-tree-postorder-traversal/binary-tree-postorder-traversal.js)| Hard|
 |150|[evaluate-reverse-polish-notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/)| [javascript](./150.evaluate-reverse-polish-notation/evaluate-reverse-polish-notation.js)| Medium|
 |167|[two-sum-ii-input-array-is-sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)| [javascript](./167.two-sum-ii-input-array-is-sorted/two-sum-ii-input-array-is-sorted.js)| Easy|
 |199|[binary-tree-right-side-view](https://leetcode.com/problems/binary-tree-right-side-view/)| [javascript](./199.binary-tree-right-side-view/binary-tree-right-side-view.js)| Medium|

@@ -1,15 +1,17 @@
-
 Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
 
+Note:&nbsp;For the purpose of this problem, we define empty string as valid palindrome.
+
+Example 1:
 
 
-For example,
-"A man, a plan, a canal: Panama" is a palindrome.
-"race a car" is not a palindrome.
+Input: &quot;A man, a plan, a canal: Panama&quot;
+Output: true
 
 
+Example 2:
 
-Note:
-Have you consider that the string might be empty? This is a good question to ask during an interview.
 
-For the purpose of this problem, we define empty string as valid palindrome.
+Input: &quot;race a car&quot;
+Output: false
+
