@@ -1,0 +1,1 @@
+{"javascript":"/**\n * @param {number} x\n * @return {boolean}\n */\nvar isPalindrome = function(x) {\n    if (x < 0) return false;\n\n\tvar arr = x.toString();\n    var j = arr.length - 1;\n\n    for (var i = 0, len = arr.length; i < len; i++) {\n    \tif (arr[i] !== arr[j - i]) return false;\n    }\n\n    return true;\n};"}
