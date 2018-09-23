@@ -1,8 +1,18 @@
-Given two strings s and t, write a function to determine if t is an anagram of s.
+Given two strings s and t&nbsp;, write a function to determine if t is an anagram of s.
 
-For example,
-s = &quot;anagram&quot;, t = &quot;nagaram&quot;, return true.
-s = &quot;rat&quot;, t = &quot;car&quot;, return false.
+Example 1:
+
+
+Input: s = &quot;anagram&quot;, t = &quot;nagaram&quot;
+Output: true
+
+
+Example 2:
+
+
+Input: s = &quot;rat&quot;, t = &quot;car&quot;
+Output: false
+
 
 Note:
 You may assume the string contains only lowercase alphabets.

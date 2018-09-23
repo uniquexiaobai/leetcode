@@ -13,6 +13,3 @@ Explanation:
  \     \
   5     4       &lt;---
 
-
-Credits:
-Special thanks to @amrsaqr for adding this problem and creating all test cases.

@@ -13,5 +13,3 @@ Explanation:
 62 + 82 = 100
 12 + 02 + 02 = 1
 
-Credits:
-Special thanks to @mithmatt and @ts for adding this problem and creating all test cases.
