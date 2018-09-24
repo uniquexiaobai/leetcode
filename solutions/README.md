@@ -1,16 +1,16 @@
 <p align="center"><img width="300" src="https://raw.githubusercontent.com/Ma63d/leetcode-spider/master/img/site-logo.png"></p>
 <p align="center">
-    <img src="https://img.shields.io/badge/Solved/Total(Locked)-63/859(139)-green.svg?style=flat-square" alt="">
+    <img src="https://img.shields.io/badge/Solved/Total(Locked)-66/859(139)-green.svg?style=flat-square" alt="">
     <img src="https://img.shields.io/badge/Hard-1-blue.svg?style=flat-square" alt="">
     <img src="https://img.shields.io/badge/Medium-27-blue.svg?style=flat-square" alt="">
-    <img src="https://img.shields.io/badge/Easy-35-blue.svg?style=flat-square" alt="">
+    <img src="https://img.shields.io/badge/Easy-38-blue.svg?style=flat-square" alt="">
 </p>
 <h3 align="center">My leetcode solutions</h3>
 
 <p align="center">
     <b>Language: javascript</b>
     <br>
-    <b>Last updated: 2018-09-23</b>
+    <b>Last updated: 2018-09-24</b>
     <br><br>
 </p>
 <!--请保留下面这行信息，让更多用户了解到这个小爬虫，衷心感谢您的支持-->
@@ -33,6 +33,7 @@
 |035|[search-insert-position](https://leetcode.com/problems/search-insert-position/)| [javascript](.&#x2F;&#x2F;035.search-insert-position&#x2F;search-insert-position.js)|Easy|39.99%||
 |049|[group-anagrams](https://leetcode.com/problems/group-anagrams/)| [javascript](.&#x2F;&#x2F;049.group-anagrams&#x2F;group-anagrams.js)|Medium|41.27%||
 |064|[minimum-path-sum](https://leetcode.com/problems/minimum-path-sum/)| [javascript](.&#x2F;&#x2F;064.minimum-path-sum&#x2F;minimum-path-sum.js)|Medium|42.93%||
+|066|[plus-one](https://leetcode.com/problems/plus-one/)| [javascript](.&#x2F;&#x2F;066.plus-one&#x2F;plus-one.js)|Easy|40.00%||
 |069|[sqrtx](https://leetcode.com/problems/sqrtx/)| [javascript](.&#x2F;&#x2F;069.sqrtx&#x2F;sqrtx.js)|Easy|29.51%||
 |070|[climbing-stairs](https://leetcode.com/problems/climbing-stairs/)| [javascript](.&#x2F;&#x2F;070.climbing-stairs&#x2F;climbing-stairs.js)|Easy|42.04%||
 |071|[simplify-path](https://leetcode.com/problems/simplify-path/)| [javascript](.&#x2F;&#x2F;071.simplify-path&#x2F;simplify-path.js)|Medium|27.04%||
@@ -81,4 +82,6 @@
 |447|[number-of-boomerangs](https://leetcode.com/problems/number-of-boomerangs/)| [javascript](.&#x2F;&#x2F;447.number-of-boomerangs&#x2F;number-of-boomerangs.js)|Easy|47.69%||
 |454|[4sum-ii](https://leetcode.com/problems/4sum-ii/)| [javascript](.&#x2F;&#x2F;454.4sum-ii&#x2F;4sum-ii.js)|Medium|48.24%||
 |476|[number-complement](https://leetcode.com/problems/number-complement/)| [javascript](.&#x2F;&#x2F;476.number-complement&#x2F;number-complement.js)|Easy|61.37%||
+|742|[to-lower-case](https://leetcode.com/problems/to-lower-case/)| [javascript](.&#x2F;&#x2F;742.to-lower-case&#x2F;to-lower-case.js)|Easy|74.36%||
+|792|[binary-search](https://leetcode.com/problems/binary-search/)| [javascript](.&#x2F;&#x2F;792.binary-search&#x2F;binary-search.js)|Easy|35.65%||
 

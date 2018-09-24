@@ -1,0 +1,1 @@
+{"javascript":"/**\n * @param {string} str\n * @return {string}\n */\nvar toLowerCase = function(str) {\n\tvar code;\n\n    return str.split('').map(c => {\n    \tcode = c.charCodeAt(0);\n\n    \tif (code >= 65 && code <= 90) {\n    \t\treturn String.fromCharCode(code + 32);\n    \t}\n    \treturn c;\n    }).join('');\n};"}
