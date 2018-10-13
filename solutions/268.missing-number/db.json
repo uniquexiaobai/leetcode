@@ -1,0 +1,1 @@
+{"javascript":"/**\n * @param {number[]} nums\n * @return {number}\n */\nvar missingNumber = function(nums) {\n\treturn nums.reduce((total, num, index) => total += (index - num), nums.length);\n};"}

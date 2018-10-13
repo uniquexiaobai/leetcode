@@ -18,4 +18,3 @@ Explanation: 10 = 3 + 3 + 4, 3 &times;&nbsp;3 &times;&nbsp;4 = 36.
 
 Note: You may assume that n is not less than 2 and not larger than 58.
 
-

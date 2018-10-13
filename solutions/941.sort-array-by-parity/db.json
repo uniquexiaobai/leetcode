@@ -1,0 +1,1 @@
+{"javascript":"/**\n * @param {number[]} A\n * @return {number[]}\n */\nvar sortArrayByParity = function(A) {\n\tvar i = 0, j = A.length - 1, temp;\n\n\twhile (i < j) {\n\t\tif (A[i] & 1) {\n\t\t\ttemp = A[j];\n\t\t\tA[j] = A[i];\n\t\t\tA[i] = temp;\n\t\t\tj--;\n\t\t} else {\n\t\t\ti++;\n\t\t}\n\t}\n\t\n\treturn A;\n};"}

@@ -12,4 +12,3 @@ Explanation:
 2     3         &lt;---
  \     \
   5     4       &lt;---
-
