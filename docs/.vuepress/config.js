@@ -5,6 +5,7 @@ ${guide.progress.num_solved}/${guide.progress.num_total} questions solved
 `;
 
 module.exports = {
+  dest: './dist',
   title: 'Leetcode Solutions',
   description,
   themeConfig: {
