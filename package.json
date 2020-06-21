@@ -13,11 +13,10 @@
   "author": "uniquexiaobai",
   "license": "ISC",
   "devDependencies": {
+    "@lokibai/leetcode-spider": "^1.2.0",
     "@vuepress/plugin-back-to-top": "^1.5.2",
     "vuepress": "^1.5.2",
     "vuepress-plugin-clean-urls": "^1.1.1"
   },
-  "dependencies": {
-    "@lokibai/leetcode-spider": "^1.2.0"
-  }
+  "dependencies": {}
 }

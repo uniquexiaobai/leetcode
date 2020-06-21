@@ -1,6 +1,6 @@
 ---
 home: true
 heroImage: '/logo.png'
-actionText: 'Solutions'
+actionText: 'Get Started →'
 actionLink: '/solutions/two-sum'
 ---
