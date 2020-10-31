@@ -28,25 +28,17 @@ title: 145. Binary Tree Postorder Traversal
  * @return {number[]}
  */
 var postorderTraversal = function(root) {
-    if (!root) return [];
-    
-    var result = [];
-    var stack = [];
-    
-    stack.push({ go: root });
-    while (stack.length) {
-        var top = stack.pop();
-        
-        if (top['get']) {
-            result.push(top.get.val);
-        } else {
-            stack.push({ get: top.go });
-            if (top.go.right) 
-                stack.push({ go: top.go.right });
-            if (top.go.left)
-                stack.push({ go: top.go.left });
-        }
-    }
-    return result;
+  var ret = [];
+
+  function postorder(head) {
+    if (!head) return;
+    postorder(head.left);
+    postorder(head.right);
+    ret.push(head.val);
+  }
+
+  postorder(root);
+
+  return ret;
 };
 ```

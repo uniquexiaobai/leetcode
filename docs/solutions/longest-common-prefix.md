@@ -29,21 +29,23 @@ title: 14. Longest Common Prefix
  * @return {string}
  */
 var longestCommonPrefix = function(strs) {
-	if (strs.length === 0) return '';
-	if (strs.length === 1) return strs[0];
+  if (strs.length <= 1) return strs[0] || '';
 
-	var minLen = strs.reduce((len, str) => str.length < len ? str.length : len, Infinity),
-		start = strs[0],
-		res = [];
+  function getPrefix(str1, str2) {
+    var i = 0, len = Math.min(str1.length, str2.length), prefix = '';
+    for (; i < len; i++) {
+      if (str1[i] !== str2[i]) break;
+      prefix += str1[i];
+    }
+    return prefix;
+  }
 
-	for (var i = 0; i < minLen; i ++) {
-		if (strs.every((str) => str[i] === start[i])) {
-			res.push(start[i]);
-		} else {
-			break;
-		}
-	}
+  var i = 1, len = strs.length, minPrefix = strs[0];
+  for (; i < len; i++) {
+    minPrefix = getPrefix(strs[i], minPrefix);
+    if (minPrefix === '') break;
+  }
 
-	return res.join('');
+  return minPrefix;
 };
 ```

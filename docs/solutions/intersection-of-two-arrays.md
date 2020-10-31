@@ -32,17 +32,20 @@ title: 349. Intersection of Two Arrays
  * @param {number[]} nums2
  * @return {number[]}
  */
+/**
+ * 利用哈希表，事件复杂度 O(n)，空间复杂度 O(n)
+ * 因为结果去重，所以哈希表的值为是否存在，无需记录出现的次数
+ */
 var intersection = function (nums1, nums2) {
   if (!nums1.length || !nums2.length) return [];
 
-  var map = {};
-  for (var i = 0, len = nums1.length; i < len; i++) {
+  var map = {}, res = [], i = 0, len;
+  for (len = nums1.length; i < len; i++) {
     if (!map[nums1[i]]) {
       map[nums1[i]] = true;
     }
   }
 
-  var res = [];
   for (i = 0, len = nums2.length; i < len; i++) {
     if (map[nums2[i]]) {
       res.push(nums2[i]);

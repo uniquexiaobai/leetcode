@@ -35,40 +35,26 @@ title: 98. Validate Binary Search Tree
  * @param {TreeNode} root
  * @return {boolean}
  */
-
 var isValidBST = function(root) {
-	function isValid(root, min, max) {
-		if (root === null) return true;
-		if (root.val <= min) return false;
-		if (root.val >= max) return false;
+  var result = true, lastNodeVal;
 
-		return isValid(root.left, min, root.val) && isValid(root.right, root.val, max);
-	}
+  function inorder(node) {
+    if (!node) return;
 
-	return isValid(root, -Infinity, Infinity);
+    inorder(node.left);
+
+    if (lastNodeVal != null && node.val <= lastNodeVal) {
+      result = false;
+      return;
+    }
+    lastNodeVal = node.val;
+
+    inorder(node.right);
+  }
+
+  inorder(root);
+  return result;
 };
 
-/*
-var isValidBST = function(root) {
-	function inorder(node, array) {
-		if (node) {
-			inorder(node.left, array);
-			array.push(node.val);
-			inorder(node.right, array);
-		}
-	}
 
-	var array = [],
-		i = 0,
-		len;
-
-	inorder(root, array);
-
-	for (i = 0, len = array.length; i < len - 1; i++) {
-		if (array[i] >= array[i + 1]) return false;
-	}
-
-	return true;
-};
-*/
 ```

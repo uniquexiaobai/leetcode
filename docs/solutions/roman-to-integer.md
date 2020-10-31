@@ -19,6 +19,8 @@ title: 13. Roman to Integer
 
 给定一个罗马数字，将其转换成整数。输入确保在 1 到 3999 的范围内。
 
+
+
 **示例 1:**
 
 **输入:** "III" **输出:** 3
@@ -38,6 +40,14 @@ title: 13. Roman to Integer
 **示例 5:**
 
 **输入:** "MCMXCIV" **输出:** 1994 **解释:** M = 1000, CM = 900, XC = 90, IV = 4.
+
+
+
+**提示：**
+
+-   题目所给测试用例皆符合罗马数字书写规则，不会出现跨位等情况。
+-   IC 和 IM 这样的例子并不符合题目要求，49 应该写作 XLIX，999 应该写作 CMXCIX 。
+-   关于罗马数字的详尽书写规则，可以参考 [罗马数字 - Mathematics ](https://b2b.partcommunity.com/community/knowledge/zh_CN/detail/10753/%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97#knowledge_article)。
 
 
 

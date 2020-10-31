@@ -27,6 +27,12 @@ title: 136. Single Number
  * @return {number}
  */
 var singleNumber = function(nums) {
-	return nums.reduce((res, num) => res ^ num, 0);
+  var res = 0, i = 0, len = nums.length;
+
+  for (; i < len; i++) {
+    res ^= nums[i];
+  }
+
+  return res;
 };
 ```

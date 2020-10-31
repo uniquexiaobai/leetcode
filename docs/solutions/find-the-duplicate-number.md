@@ -30,14 +30,13 @@ title: 287. Find the Duplicate Number
  * @return {number}
  */
 var findDuplicate = function(nums) {
-    var map = {};
+  var map = {}, i = 0, len = nums.length, num;
 
-    for (var i = 0, len = nums.length; i < len; i++) {
-    	if (map[nums[i]]) {
-    		return nums[i];
-    	} else {
-    		map[nums[i]] = true;
-    	}
-    }
+  for (; i < len; i++) {
+    num = nums[i];
+
+    if (map[num]) return num;
+    map[num] = true;
+  }
 };
 ```

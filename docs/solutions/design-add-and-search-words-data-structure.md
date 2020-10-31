@@ -1,23 +1,32 @@
 ---
-id: add-and-search-word-data-structure-design
-title: 211. Add and Search Word - Data structure design
+id: design-add-and-search-words-data-structure
+title: 211. Design Add and Search Words Data Structure
 ---
 
-# Add and Search Word - Data structure design
+# Design Add and Search Words Data Structure
 
-设计一个支持以下两种操作的数据结构：
+请你设计一个数据结构，支持 添加新单词 和 查找字符串是否与任何先前添加的字符串匹配 。
 
-void addWord(word) bool search(word)
+实现词典类 `WordDictionary` ：
 
-search(word) 可以搜索文字或正则表达式字符串，字符串只包含字母 `.` 或 `a-z` 。 `.` 可以表示任何一个字母。
+-   `WordDictionary()` 初始化词典对象
+-   `void addWord(word)` 将 `word` 添加到数据结构中，之后可以对它进行匹配
+-   `bool search(word)` 如果数据结构中存在字符串与 `word` 匹配，则返回 `true` ；否则，返回 `false` 。`word` 中可能包含一些 `'.'` ，每个 `.` 都可以表示任何一个字母。
 
-**示例:**
 
-addWord("bad") addWord("dad") addWord("mad") search("pad") -> false search("bad") -> true search(".ad") -> true search("b..") -> true
 
-**说明:**
+**示例：**
 
-你可以假设所有单词都是由小写字母 `a-z` 组成的。
+**输入：** \["WordDictionary","addWord","addWord","addWord","search","search","search","search"] \[\[],\["bad"],\["dad"],\["mad"],\["pad"],\["bad"],\[".ad"],\["b.."]] **输出：** \[null,null,null,null,false,true,true,true] **解释：** WordDictionary wordDictionary = new WordDictionary(); wordDictionary.addWord("bad"); wordDictionary.addWord("dad"); wordDictionary.addWord("mad"); wordDictionary.search("pad"); // return False wordDictionary.search("bad"); // return True wordDictionary.search(".ad"); // return True wordDictionary.search("b.."); // return True
+
+
+
+**提示：**
+
+-   `1 <= word.length <= 500`
+-   `addWord` 中的 `word` 由小写英文字母组成
+-   `search` 中的 `word` 由 '.' 或小写英文字母组成
+-   最调用多 `50000` 次 `addWord` 和 `search`
 
 
 

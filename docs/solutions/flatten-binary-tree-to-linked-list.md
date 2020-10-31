@@ -31,37 +31,27 @@ title: 114. Flatten Binary Tree to Linked List
  * @param {TreeNode} root
  * @return {void} Do not return anything, modify root in-place instead.
  */
-var flatten = function(root) {
-    if (!root) return null;
-    
-    function insertLast(node, last) {
-        var curr = node;
-        
-        while (curr.right) {
-            curr = curr.right;
-        }
-        curr.right = last;
-    }
-    
-    var curr = root,
-    	temp;
-    
-    while (curr) {
-        if (curr.left && curr.right) {
-            temp = curr.right;
-            
-            curr.right = curr.left;
-            
-            insertLast(curr.right, temp);
-        } else {
-            curr.right = curr.left || curr.right;
-        }
-        
-        curr.left = null;
+var flatten = function (root) {
+  if (!root) return null;
 
-        curr = curr.right;
-    }
-    
-    return root;
+  var head = new TreeNode(),
+    curr = head;
+
+  function preOrder(node) {
+    if (!node) return;
+
+    var right = node.right;
+
+    curr.right = node;
+    curr.left = null;
+    curr = curr.right;
+
+    preOrder(node.left);
+    preOrder(right);
+  }
+
+  preOrder(root);
+
+  return head.right;
 };
 ```

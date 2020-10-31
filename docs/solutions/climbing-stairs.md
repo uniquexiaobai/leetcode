@@ -27,12 +27,10 @@ title: 70. Climbing Stairs
  * @return {number}
  */
 var climbStairs = function (n) {
-  var a = 0, b = 1, t = 0;
+  var a = 0, b = 1;
 
   while (n--) {
-    t = b;
-    b = a + b;
-    a = t;
+    [b, a] = [a + b, b];
   }
 
   return b;

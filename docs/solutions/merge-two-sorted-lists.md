@@ -28,37 +28,6 @@ title: 21. Merge Two Sorted Lists
  * @param {ListNode} l2
  * @return {ListNode}
  */
-/*
-var mergeTwoLists = function(l1, l2) {
-    var head = new ListNode(null),
-        curr = head;
-    
-    while (l1 && l2) {
-        if (l1.val < l2.val) {
-            curr.next = new ListNode(l1.val);
-            l1 = l1.next;
-        } else {
-            curr.next = new ListNode(l2.val);
-            l2 = l2.next;
-        }
-        curr = curr.next;
-    }
-    
-    while (l1) {
-        curr.next = new ListNode(l1.val);
-        l1 = l1.next;
-        curr = curr.next;
-    }
-    
-    while (l2) {
-        curr.next = new ListNode(l2.val);
-        l2 = l2.next;
-        curr = curr.next;
-    }
-    
-    return head.next;
-};
-*/
 
 var mergeTwoLists = function(l1, l2) {
     if (!l1 || !l2) return l1 || l2;
@@ -81,4 +50,5 @@ var mergeTwoLists = function(l1, l2) {
     
     return head.next;
 }
+
 ```

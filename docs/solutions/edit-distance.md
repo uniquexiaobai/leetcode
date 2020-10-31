@@ -33,21 +33,28 @@ title: 72. Edit Distance
  */
 var minDistance = function(word1, word2) {
 	if (word1 === word2) return 0;
+  if (!word1.length || !word2.length) return word1.length || word2.length;
 
 	var cache = {};
 
 	function _distance(i, j) {
-		if (i < 1) return j;
-		if (j < 1) return i;
+		if (i < 0) return j + 1;
+		if (j < 0) return i + 1;
 
-		if (word1[i - 1] === word2[j - 1]) {
-			if (!cache[[i - 1, j - 1]]) cache[[i - 1, j - 1]] = _distance(i - 1, j - 1);
+    if (!cache[[i - 1, j - 1]]) {
+      cache[[i - 1, j - 1]] = _distance(i - 1, j - 1);
+    }
+
+		if (word1[i] === word2[j]) {
 			return cache[[i - 1, j - 1]];
 		}
 
-		if (!cache[[i - 1, j]]) cache[[i - 1, j]] = _distance(i - 1, j);
-		if (!cache[[i, j - 1]]) cache[[i, j - 1]] = _distance(i, j - 1);
-		if (!cache[[i - 1, j - 1]]) cache[[i - 1, j - 1]] = _distance(i - 1, j - 1);
+		if (!cache[[i - 1, j]]) {
+      cache[[i - 1, j]] = _distance(i - 1, j);
+    }
+		if (!cache[[i, j - 1]]) {
+      cache[[i, j - 1]] = _distance(i, j - 1);
+    }
 
 		return Math.min(
 			cache[[i - 1, j]] + 1, 
@@ -56,6 +63,6 @@ var minDistance = function(word1, word2) {
 		);
 	}
 
-	return _distance(word1.length, word2.length);
+	return _distance(word1.length - 1, word2.length - 1);
 };
 ```

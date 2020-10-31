@@ -25,15 +25,22 @@ title: 202. Happy Number
  * @return {boolean}
  */
 var isHappy = function(n) {
-	var set = new Set();
+  function nextHappy(n) {
+    var res = 0;
+    do {
+      res += Math.pow((n % 10), 2);
+      n = Math.floor(n / 10);
+    } while (n / 10 > 0)
+    return res;
+  }
 
-	while (!set.has(n)) {
-		if (n === 1) return true;
-		set.add(n);
-		n = (n + '').split('').reduce(function (prev, cur) {
-			return prev + cur * cur; 
-		}, 0);
-	}
-	return false;
+  var next, map = {};
+  while (true) {
+    next = nextHappy(n);
+    if (map[next]) return false;
+    if (next === 1) return true;
+    map[next] = true;
+    n = next;
+  }
 };
 ```

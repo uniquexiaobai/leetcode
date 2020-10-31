@@ -28,19 +28,15 @@ title: 100275. 数组中重复的数字 LCOF
  * @return {number}
  */
 var findRepeatNumber = function (nums) {
-  var i = 0,
-    len = nums.length,
-    j;
+  var i = 0, len = nums.length, num;
 
   for (; i < len; i++) {
-    while (i !== nums[i]) {
-      j = nums[i];
-
-      if (j === nums[j]) return j;
-
-      nums[i] = nums[j];
-      nums[j] = j;
+    num = Math.abs(nums[i]);
+    // 0 被转换成 -0
+    if (nums[num] < 0 || (nums[num] === 0 && Infinity / nums[num] < 0)) {
+      return num;
     }
+    nums[num] *= -1;
   }
 };
 ```

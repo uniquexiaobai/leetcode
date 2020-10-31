@@ -27,55 +27,46 @@ title: 215. Kth Largest Element in an Array
  * @param {number} k
  * @return {number}
  */
-/*
-var findKthLargest = function(nums, k) {
-	return nums.sort((a, b) => b - a)[k - 1];
-};
-*/
 
 /*
-var findKthLargest = function(nums, k) {
-	var len = nums.length;
+ * 1. 升序排序后返回第 K 个，时间复杂度 O(nlogn)
+ * 2. 利用块排，每次舍去一半，时间复杂度 O(n)
+ * 3. 利用堆，时间复杂度 O(nlogk)
+ */
 
-	for (var i = 0; i < k; i++) {
-		for (var j = 0; j < len - i - 1; j++) {
-			if (nums[j] > nums[j + 1]) {
-				[nums[j], nums[j + 1]] = [nums[j + 1], nums[j]];
-			}
-		}
-	}
+var findKthLargest = function (nums, k) {
+  function partition(arr, l, r) {
+    var large = [],
+      small = [],
+      i = l + 1,
+      mid = arr[l];
 
-	return nums[len - k];
-};
-*/
+    for (; i <= r; i++) {
+      if (arr[i] < mid) {
+        small.push(arr[i]);
+      } else {
+        large.push(arr[i]);
+      }
+    }
 
-var findKthLargest = function(nums, k) {
-	function partition(arr, l, r) {
-		var j = l;
+    arr.splice(l, r - l + 1, ...large, mid, ...small);
+    return l + large.length;
+  }
 
-		for (var i = l + 1; i <= r; i++) {
-			if (arr[i] > arr[l]) {
-				[arr[i], arr[j + 1]] = [arr[j + 1], arr[i]];
-				j++
-			}
-		}
+  var i = 0,
+    j = nums.length - 1,
+    p;
 
-		[arr[l], arr[j]] = [arr[j], arr[l]];
-		return j;
-	}
+  while (i <= j) {
+    p = partition(nums, i, j);
 
-	var i = 0, j = nums.length - 1;
-
-	while (i <= j) {
-		p = partition(nums, i, j);
-
-		if (p + 1 === k) {
-			return nums[p];
-		} else if (p + 1 < k) {
-			i = p + 1;
-		} else {
-			j = p - 1;
-		}
-	}
+    if (p + 1 === k) {
+      return nums[p];
+    } else if (p + 1 < k) {
+      i = p + 1;
+    } else {
+      j = p - 1;
+    }
+  }
 };
 ```

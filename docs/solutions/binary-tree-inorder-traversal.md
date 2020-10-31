@@ -28,25 +28,17 @@ title: 94. Binary Tree Inorder Traversal
  * @return {number[]}
  */
 var inorderTraversal = function(root) {
-    if (!root) return [];
-    
-    var result = [];
-    var stack = [];
-    
-    stack.push({ command: 'go', node: root });
-    while (stack.length) {
-        var top = stack.pop();
-        
-        if (top.command === 'return') {
-            result.push(top.node.val);
-        } else {
-            if (top.node.right) 
-                stack.push({ command: 'go', node: top.node.right });
-            stack.push({ command: 'return', node: top.node });
-            if (top.node.left) 
-                stack.push({ command: 'go', node: top.node.left });
-        }
-    }
-    return result;
+  var ret = [];
+
+  function inorder(head) {
+    if (!head) return;
+    inorder(head.left, ret);
+    ret.push(head.val);
+    inorder(head.right, ret);
+  }
+
+  inorder(root);
+
+  return ret;
 };
 ```

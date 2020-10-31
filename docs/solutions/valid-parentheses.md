@@ -42,19 +42,19 @@ title: 20. Valid Parentheses
  * @return {boolean}
  */
 var isValid = function(s) {
-    var stack = [],
-    	map = {')': '(', '}': '{', ']': '['},
-    	i = 0,
-    	len = s.length;
+  var map = {')': '(', '}': '{', ']': '['},
+      stack = [],
+      i = 0,
+      len = s.length;
 
-    for (; i < len; i++) {
-    	if (!(s[i] in map)) {
-    		stack.push(s[i]);
-    	} else if (!stack.length || map[s[i]] !== stack.pop()) {
-    		return false;
-    	}
+  for (; i < len; i++) {
+    if (!map[s[i]]) {
+      stack.push(s[i]);
+    } else if (!stack.length || map[s[i]] !== stack.pop()) {
+      return false;
     }
+  }
 
-    return !stack.length
+  return !stack.length;
 };
 ```
